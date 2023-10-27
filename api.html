@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation &mdash; sensirion_i2c_sht3x 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Build documentation" href="build-documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sensirion_i2c_sht3x
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sht3x">SHT3X</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sht3x.device">Sht3xDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sht3x.commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sht3x.result_types">Result Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sensirion_i2c_sht3x</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h1>
+<section id="sht3x">
+<h2>SHT3X<a class="headerlink" href="#sht3x" title="Permalink to this headline"></a></h2>
+<section id="module-sensirion_i2c_sht3x.device">
+<span id="sht3xdevice"></span><h3>Sht3xDevice<a class="headerlink" href="#module-sensirion_i2c_sht3x.device" title="Permalink to this headline"></a></h3>
+<p>The class Sht3xDeviceBase implements the low level interface of the sensor.
+The class Sht3xDevice extends the Sht3xDeviceBase. It provides additional functions to ease the use of the
+sensor.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.device.</span></span><span class="sig-name descname"><span class="pre">Sht3xDeviceBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase" title="Permalink to this definition"></a></dt>
+<dd><p>Low level API implementation of SHT3X</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.channel">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.channel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_high_repeatability">
+<span class="sig-name descname"><span class="pre">measure_single_shot_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with high repeatability</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_high_repeatability_clock_stretching">
+<span class="sig-name descname"><span class="pre">measure_single_shot_high_repeatability_clock_stretching</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_high_repeatability_clock_stretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_high_repeatability_clock_stretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with high repeatability and clock stretching enabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_medium_repeatability">
+<span class="sig-name descname"><span class="pre">measure_single_shot_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with medium repeatability</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_medium_repeatability_clock_stretching">
+<span class="sig-name descname"><span class="pre">measure_single_shot_medium_repeatability_clock_stretching</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_medium_repeatability_clock_stretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_medium_repeatability_clock_stretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with medium repeatability and clock stretching enabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_low_repeatability">
+<span class="sig-name descname"><span class="pre">measure_single_shot_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with low repeatability</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_low_repeatability_clock_stretching">
+<span class="sig-name descname"><span class="pre">measure_single_shot_low_repeatability_clock_stretching</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.measure_single_shot_low_repeatability_clock_stretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.measure_single_shot_low_repeatability_clock_stretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with low repeatability and clock stretching enabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_high_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_0_5_mps_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_0_5_mps_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and high repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_medium_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_0_5_mps_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_0_5_mps_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and medium repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_low_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_0_5_mps_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_0_5_mps_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_0_5_mps_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and low repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_high_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_1_mps_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_1_mps_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and high repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_medium_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_1_mps_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_1_mps_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and medium repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_low_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_1_mps_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_1_mps_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_1_mps_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and low repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_high_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_2_mps_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_2_mps_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and high repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_medium_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_2_mps_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_2_mps_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and medium repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_low_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_2_mps_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_2_mps_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_2_mps_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and low repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_high_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_4_mps_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_4_mps_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and high repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_medium_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_4_mps_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_4_mps_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and medium repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_low_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_4_mps_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_4_mps_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_4_mps_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and low repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_high_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_10_mps_high_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_10_mps_high_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_high_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and high repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_medium_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_10_mps_medium_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_10_mps_medium_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_medium_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and medium repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_low_repeatability">
+<span class="sig-name descname"><span class="pre">start_measurement_10_mps_low_repeatability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_measurement_10_mps_low_repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_measurement_10_mps_low_repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and low repeatability.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_art_measurement">
+<span class="sig-name descname"><span class="pre">start_art_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.start_art_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.start_art_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Start ART (accelerated response time) measurement</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After issuing the ART command the sensor will start acquiring data with a frequency of 4Hz.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.read_measurement">
+<span class="sig-name descname"><span class="pre">read_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.read_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.read_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Read out data after a “start measurement” or “start art measurement” command has been issued.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return temperature_ticks</dt>
+<dd class="field-odd"><p>Temperature ticks. Convert to degrees celsius by -45 + 175 * value / 65535</p>
+</dd>
+<dt class="field-even">Return humidity_ticks</dt>
+<dd class="field-even"><p>Humidity ticks. Convert to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After the read out command fetch data has been issued, the data memory is cleared, i.e. no measurement data is present.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.stop_measurement">
+<span class="sig-name descname"><span class="pre">stop_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.stop_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.stop_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Stop the periodic measurement mode.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Upon reception of this command the sensor will abort the ongoing measurement and enter the single shot mode.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.enable_heater">
+<span class="sig-name descname"><span class="pre">enable_heater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.enable_heater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.enable_heater" title="Permalink to this definition"></a></dt>
+<dd><p>Enable the heater</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SHT3x is equipped with an internal heater, which is meant for plausibility checking only.
+The temperature increase achieved by the heater depends on various parameters and lies in the
+range of a few degrees centigrade.</p>
+<p>After a reset the heater is disabled (default condition).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.disable_heater">
+<span class="sig-name descname"><span class="pre">disable_heater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.disable_heater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.disable_heater" title="Permalink to this definition"></a></dt>
+<dd><p>Disable the heater</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.read_status_register">
+<span class="sig-name descname"><span class="pre">read_status_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.read_status_register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.read_status_register" title="Permalink to this definition"></a></dt>
+<dd><p>Read out the status register</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return status_register</dt>
+<dd class="field-odd"><p>The contents of the status register</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The status register contains information on the operational status of the heater,
+the alert mode and on the execution status of the last command and the last write sequence.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.clear_status_register">
+<span class="sig-name descname"><span class="pre">clear_status_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.clear_status_register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.clear_status_register" title="Permalink to this definition"></a></dt>
+<dd><p>Clear (set to zero) all flags (Bit 4) in the status register.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDeviceBase.soft_reset">
+<span class="sig-name descname"><span class="pre">soft_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDeviceBase.soft_reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDeviceBase.soft_reset" title="Permalink to this definition"></a></dt>
+<dd><p>Perform a soft reset.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A system reset of the SHT3x can be achieved in multiple ways:
+- Soft reset: use this command
+- I2C general call: all devices on the I2C bus are reset by sending
+the command 0x06 to the I2C address 0x00
+- Reset pin: send a pulse to the dedicated nReset pin. The nReset pin has
+to be pulled low for a minimum of 1 µs to generate a reset of the sensor.
+- Hard reset: Power down (incl. pulling SDA, SCL and ADDR low)</p>
+<p>During the reset procedure the sensor will not process commands.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.device.</span></span><span class="sig-name descname"><span class="pre">Sht3xDevice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice" title="Permalink to this definition"></a></dt>
+<dd><p>Driver class implementation of SHT3X</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.sht3x">
+<span class="sig-name descname"><span class="pre">sht3x</span></span><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.sht3x" title="Permalink to this definition"></a></dt>
+<dd><p>Access to base class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.measure_single_shot">
+<span class="sig-name descname"><span class="pre">measure_single_shot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_repeatability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_clock_stretching</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice.measure_single_shot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.measure_single_shot" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with the specified properties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measurement_repeatability</strong> – The repeatability of the periodic measurement</p></li>
+<li><p><strong>is_clock_stretching</strong> – Toggle clock stretching</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return a_temperature</dt>
+<dd class="field-even"><p>Converted from ticks to degrees celsius by -45 + (175 * value / 65535)</p>
+</dd>
+<dt class="field-odd">Return a_humidity</dt>
+<dd class="field-odd"><p>Converted from ticks to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.start_periodic_measurement">
+<span class="sig-name descname"><span class="pre">start_periodic_measurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement_repeatability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages_per_second</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice.start_periodic_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.start_periodic_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Start the periodic measurement measurement mode.</p>
+<p>This is a convenience method that selects the correct measurement command based on the provided
+arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measurement_repeatability</strong> – The repeatability of the periodic measurement</p></li>
+<li><p><strong>messages_per_second</strong> – The messages per second of the periodic measurement</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.blocking_read_measurement">
+<span class="sig-name descname"><span class="pre">blocking_read_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice.blocking_read_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.blocking_read_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>This is a convenience method that combines polling the data ready flag and reading out the data.
+As the minimal measurement interval is 2s and we sleep for 100ms we iterate at most 200 times.
+Note that this is blocking the system for a considerable amount of time!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return a_temperature</dt>
+<dd class="field-odd"><p>Converted from ticks to degrees celsius by -45 + (175 * value / 65535)</p>
+</dd>
+<dt class="field-even">Return a_humidity</dt>
+<dd class="field-even"><p>Converted from ticks to relative humidity by 100 * value / 65535</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.device.Sht3xDevice.read_status_register">
+<span class="sig-name descname"><span class="pre">read_status_register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/device.html#Sht3xDevice.read_status_register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.device.Sht3xDevice.read_status_register" title="Permalink to this definition"></a></dt>
+<dd><p>Read the contents of the status register</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return a_status_register</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sht3x.commands">
+<span id="commands"></span><h3>Commands<a class="headerlink" href="#module-sensirion_i2c_sht3x.commands" title="Permalink to this headline"></a></h3>
+<p>The transfer classes specify the data that is transferred between host and sensor. The generated transfer classes
+are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StatusRegisterT">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StatusRegisterT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">int_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StatusRegisterT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StatusRegisterT" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StatusRegisterT.command_status">
+<span class="sig-name descname"><span class="pre">command_status</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=1,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StatusRegisterT.command_status" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StatusRegisterT.system_reset_detected">
+<span class="sig-name descname"><span class="pre">system_reset_detected</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=4,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StatusRegisterT.system_reset_detected" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StatusRegisterT.new_data_available">
+<span class="sig-name descname"><span class="pre">new_data_available</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=6,</span> <span class="pre">width=4)</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StatusRegisterT.new_data_available" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StatusRegisterT.heater_status">
+<span class="sig-name descname"><span class="pre">heater_status</span></span><em class="property"> <span class="pre">=</span> <span class="pre">BitField(offset=13,</span> <span class="pre">width=1)</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StatusRegisterT.heater_status" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with high repeatability</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9216</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatability.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotHighRepeatabilityClockStretching</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotHighRepeatabilityClockStretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with high repeatability and clock stretching enabled</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11270</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotHighRepeatabilityClockStretching.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotHighRepeatabilityClockStretching.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with medium repeatability</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9227</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatability.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotMediumRepeatabilityClockStretching</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotMediumRepeatabilityClockStretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with medium repeatability and clock stretching enabled</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11277</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotMediumRepeatabilityClockStretching.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotMediumRepeatabilityClockStretching.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with low repeatability</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9238</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatability.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSingleShotLowRepeatabilityClockStretching</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotLowRepeatabilityClockStretching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching" title="Permalink to this definition"></a></dt>
+<dd><p>Single shot measurement with low repeatability and clock stretching enabled</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11280</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#MeasureSingleShotLowRepeatabilityClockStretching.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.MeasureSingleShotLowRepeatabilityClockStretching.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement05MpsHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and high repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8242</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement05MpsMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and medium repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8228</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement05MpsLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 0.5 mps and low repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8239</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement05MpsLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement05MpsLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement1MpsHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and high repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8496</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement1MpsMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and medium repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8486</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement1MpsLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 1 mps and low repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8493</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement1MpsLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement1MpsLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement2MpsHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and high repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8758</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement2MpsMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and medium repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8736</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement2MpsLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 2 mps and low repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8747</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement2MpsLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement2MpsLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement4MpsHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and high repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9012</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement4MpsMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and medium repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8994</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement4MpsLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 4 mps and low repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9001</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement4MpsLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement4MpsLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement10MpsHighRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsHighRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and high repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10039</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsHighRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsHighRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement10MpsMediumRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsMediumRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and medium repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10017</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsMediumRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsMediumRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartMeasurement10MpsLowRepeatability</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsLowRepeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability" title="Permalink to this definition"></a></dt>
+<dd><p>Start periodic measurement mode with 10 mps and low repeatability.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10042</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartMeasurement10MpsLowRepeatability.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartMeasurement10MpsLowRepeatability.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartArtMeasurement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StartArtMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartArtMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartArtMeasurement" title="Permalink to this definition"></a></dt>
+<dd><p>Start ART (accelerated response time) measurement</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartArtMeasurement.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11058</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartArtMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartArtMeasurement.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StartArtMeasurement.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartArtMeasurement.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StartArtMeasurement.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StartArtMeasurement.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadMeasurement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ReadMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadMeasurement" title="Permalink to this definition"></a></dt>
+<dd><p>Read out data after a “start measurement” or “start art measurement” command has been issued.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadMeasurement.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">57344</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadMeasurement.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ReadMeasurement.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadMeasurement.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadMeasurement.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadMeasurement.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadMeasurement.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadMeasurement.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StopMeasurement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">StopMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StopMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StopMeasurement" title="Permalink to this definition"></a></dt>
+<dd><p>Stop the periodic measurement mode.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StopMeasurement.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12435</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StopMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StopMeasurement.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#StopMeasurement.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StopMeasurement.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.StopMeasurement.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.StopMeasurement.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.EnableHeater">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">EnableHeater</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#EnableHeater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.EnableHeater" title="Permalink to this definition"></a></dt>
+<dd><p>Enable the heater</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.EnableHeater.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12397</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.EnableHeater.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.EnableHeater.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#EnableHeater.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.EnableHeater.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.EnableHeater.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.EnableHeater.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.DisableHeater">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">DisableHeater</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#DisableHeater"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.DisableHeater" title="Permalink to this definition"></a></dt>
+<dd><p>Disable the heater</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.DisableHeater.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12390</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.DisableHeater.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.DisableHeater.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#DisableHeater.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.DisableHeater.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.DisableHeater.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.DisableHeater.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadStatusRegister">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">ReadStatusRegister</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ReadStatusRegister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadStatusRegister" title="Permalink to this definition"></a></dt>
+<dd><p>Read out the status register</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadStatusRegister.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">62253</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadStatusRegister.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadStatusRegister.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ReadStatusRegister.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadStatusRegister.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadStatusRegister.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadStatusRegister.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ReadStatusRegister.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ReadStatusRegister.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ClearStatusRegister">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">ClearStatusRegister</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ClearStatusRegister"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ClearStatusRegister" title="Permalink to this definition"></a></dt>
+<dd><p>Clear (set to zero) all flags (Bit 4) in the status register.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ClearStatusRegister.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12353</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ClearStatusRegister.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ClearStatusRegister.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#ClearStatusRegister.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ClearStatusRegister.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.ClearStatusRegister.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.ClearStatusRegister.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.SoftReset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">SoftReset</span></span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#SoftReset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.SoftReset" title="Permalink to this definition"></a></dt>
+<dd><p>Perform a soft reset.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.SoftReset.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12450</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.SoftReset.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.SoftReset.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#SoftReset.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.SoftReset.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.SoftReset.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.SoftReset.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Repeatability">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">Repeatability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#Repeatability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Repeatability" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Repeatability.LOW">
+<span class="sig-name descname"><span class="pre">LOW</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Repeatability.LOW" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Repeatability.MEDIUM">
+<span class="sig-name descname"><span class="pre">MEDIUM</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Repeatability.MEDIUM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Repeatability.HIGH">
+<span class="sig-name descname"><span class="pre">HIGH</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Repeatability.HIGH" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.commands.</span></span><span class="sig-name descname"><span class="pre">Mps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/commands.html#Mps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps.EVERY_TWO_SECONDS">
+<span class="sig-name descname"><span class="pre">EVERY_TWO_SECONDS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps.EVERY_TWO_SECONDS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps.ONE_PER_SECOND">
+<span class="sig-name descname"><span class="pre">ONE_PER_SECOND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps.ONE_PER_SECOND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps.TWO_PER_SECOND">
+<span class="sig-name descname"><span class="pre">TWO_PER_SECOND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps.TWO_PER_SECOND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps.FOUR_PER_SECOND">
+<span class="sig-name descname"><span class="pre">FOUR_PER_SECOND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps.FOUR_PER_SECOND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.commands.Mps.TEN_PER_SECOND">
+<span class="sig-name descname"><span class="pre">TEN_PER_SECOND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10</span></em><a class="headerlink" href="#sensirion_i2c_sht3x.commands.Mps.TEN_PER_SECOND" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sht3x.result_types">
+<span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_i2c_sht3x.result_types" title="Permalink to this headline"></a></h3>
+<p>The signal classes specify transformations of the raw sensor signals into a meaningful units.
+The generated signal types are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.result_types.SignalTemperature">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature_ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/result_types.html#SignalTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.result_types.SignalTemperature" title="Permalink to this definition"></a></dt>
+<dd><p>Converted from ticks to degrees celsius by -45 + (175 * value / 65535)</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.result_types.SignalTemperature.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sht3x.result_types.SignalTemperature.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.result_types.SignalHumidity">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sht3x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalHumidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">humidity_ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sht3x/result_types.html#SignalHumidity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sht3x.result_types.SignalHumidity" title="Permalink to this definition"></a></dt>
+<dd><p>Converted from ticks to relative humidity by 100 * value / 65535</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sht3x.result_types.SignalHumidity.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sht3x.result_types.SignalHumidity.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="build-documentation.html" class="btn btn-neutral float-left" title="Build documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
